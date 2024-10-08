@@ -1,0 +1,7 @@
+# Ignorar archivos de configuración de IDE
+*.idea/
+*.vscode/
+
+# Ignorar archivos temporales
+*.log
+*.tmp
