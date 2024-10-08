@@ -95,7 +95,7 @@ Una guía completa para usuarios que deseen aprender a utilizar Kubernetes, Helm
 Instrucciones sobre cómo contribuir a este repositorio.
 
 ## Licencia
-Este proyecto está licenciado bajo la [MIT License](LICENSE).
+Este proyecto está licenciado bajo la [Apache License 2.0](LICENSE).
 
 ## Contacto
 Para más información o preguntas, puedes contactarme en:
