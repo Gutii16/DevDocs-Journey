@@ -20,7 +20,3 @@ Recomendaciones y Recursos para Certificación en Kubernetes
 4. Recursos Complementarios
    - [Kubernetes Documentation](https://kubernetes.io/docs/home/): Documentación oficial, invaluable para prepararte para cualquier examen de certificación.
    - [Udemy](https://www.udemy.com/courses/search/?q=kubernetes&src=sac): Varios cursos que te preparan para las certificaciones CKA y CKAD.
-
-Consejos Adicionales
-- Prueba gratis: Algunas plataformas ofrecen pruebas gratuitas o una garantía de devolución de dinero. Asegúrate de aprovechar estas opciones.
-- Recursos de práctica: Busca exámenes de práctica o laboratorios en línea que simulen la experiencia real del examen.
