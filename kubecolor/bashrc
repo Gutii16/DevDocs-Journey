@@ -1,0 +1,43 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+# Note: PS1 and umask are already set in /etc/profile. You should not
+# need this unless you want different defaults for root.
+# PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
+# umask 022
+
+# You may uncomment the following lines if you want `ls' to be colorized:
+# export LS_OPTIONS='--color=auto'
+# eval "`dircolors`"
+alias ll='ls $LS_OPTIONS -l'
+alias lah='ls $LS_OPTIONS -lah'
+alias lrt='ls $LS_OPTIONS -lrt'
+# Some more alias to avoid making mistakes:
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+HISTSIZE=10000
+HISTFILESIZE=10000
+# enable bash completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# source <(kubectl completion bash)
+source <(helm completion bash)
+source <(velero completion bash)
+
+alias k=kubecolor
+alias kubectl=kubecolor
+complete -o default -F __start_kubectl k
+
+# Este archivo configura:
+# - Alias útiles para comandos comunes (ls, kubectl).
+# - Un historial más amplio para almacenar más comandos.
+# - Autocompletado en la terminal, incluyendo herramientas específicas como helm y velero.
+# - Reemplazo de kubectl con kubecolor para mejorar la legibilidad con colores.
+# - Extensiones del $PATH para incluir herramientas como krew.
