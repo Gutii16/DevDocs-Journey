@@ -130,9 +130,6 @@ kubectl get pod
 
 Deberías ver la salida de estos comandos con colores, facilitando la lectura:
 
-![alt text](6.png)
-
-
 La etiqueta `--force-colors` se utiliza en Kubernetes para asegurar que los colores ANSI (usados para resaltar texto) se incluyan en la salida del comando, incluso cuando esta salida se redirige o se procesa a través de otros comandos (como `sort`, `grep`, etc.). 
 
 Normalmente, los colores solo se habilitan automáticamente si el comando detecta que la salida va directamente a un terminal interactivo (TTY). Cuando la salida no va directamente a un terminal (por ejemplo, al redirigirla o usar pipes `|`), Kubernetes desactiva los colores por defecto.
