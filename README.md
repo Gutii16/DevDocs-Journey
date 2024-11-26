@@ -1,72 +1,70 @@
 # DevDocs Journey
 
-Este repositorio contiene documentación y recursos genéricos que pueden ser utilizados como base para diferentes proyectos. Es ideal para desarrolladores y colaboradores que buscan un punto de partida estructurado.
+This repository contains documentation and generic resources that can be used as a base for different projects. It is ideal for developers and collaborators looking for a structured starting point.
 
-## Características
+## Features
 
-- Documentación clara y organizada.
-- Estructura base para nuevos proyectos.
-- Ejemplos y recursos útiles.
+- Clear and organized documentation.
+- Base structure for new projects.
+- Useful examples and resources.
 
-## Requisitos
+## Requirements
 
-Antes de comenzar, asegúrate de tener instalado:
+Before getting started, make sure you have the following installed:
 
-- [Git](https://git-scm.com/) para clonar y gestionar el repositorio.
-- [Node.js](https://nodejs.org/) o cualquier otra tecnología relevante (si es aplicable).
-- Editor de texto recomendado: [Visual Studio Code](https://code.visualstudio.com/).
+- [Git](https://git-scm.com/) to clone and manage the repository.
+- [Node.js](https://nodejs.org/) or any other relevant technology (if applicable).
+- Recommended text editor: [Visual Studio Code](https://code.visualstudio.com/).
 
-## Instalación
+## Installation
 
-Sigue estos pasos para clonar y configurar el proyecto en tu máquina local:
+Follow these steps to clone and set up the project on your local machine:
 
-1. Clona el repositorio:
+1. Clone the repository:
+
 ```bash
 git clone https://github.com/Gutii16/DevDocs-Journey.git
 ```
 
-2. Navega al directorio del proyecto:
+2. Navigate to the project directory:
 
 ```bash 
-cd DevDocs-Journey
+cd DevDocs-Journey 
 ```
 
-3. (Opcional) Instala e inicia las dependecias si es un proyecto con un entorno específico: 
+3. (Optional) Install and start dependencies if it's a project with a specific enviroment:
 
 ```bash 
 npm install
 npm start
 ```
 
-## Contribuciones
+## Contributions
 
-¡Las contribuciones son bienvenidas! Sigue estos pasos para colaborar:
-
-Haz un `fork` del repositorio.
-
-Crea una rama para tu contribución:
-
-```bash
-git checkout -b nombre-de-tu-rama
-```
-
-Realiza tus cambios y confirma los commits:
-
-```bash
-git commit -m "Descripción breve de los cambios"
-```
-
-Envía tus cambios:
+Contributions are welcome! Follow these steps to collaborate:
+Fork the repository.
+Create a branch for your contribution:
 
 ```bash 
-git push origin nombre-de-tu-rama
+git checkout -b your-branch-name
+``` 
+
+Make your changes and commit them:
+
+```bash
+git commit -m "Brief description of the changes"
 ```
 
-Crea un Pull Request en GitHub.
+Push your changes:
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Puedes usarlo, modificarlo y distribuirlo libremente.
+```bash 
+git push origin your-branch-name
 
-¡Gracias por tu interés en este proyecto! Si tienes preguntas o sugerencias, no dudes en abrir un issue o contactar a diego.gutierrez2000@gmail.com
+```
 
+Create a Pull Request on Github.
 
+## License
+
+This project is licensed under the MIT License. You can use, modify, and distribute it freely.
+Thank you for your interest in this project! If you have any questions or suggestions, feel free to open an issue or contact diego.gutierrez2000@gmail.com.
