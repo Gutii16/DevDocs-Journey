@@ -1,22 +1,26 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-
-# Note: PS1 and umask are already set in /etc/profile. You should not
-# need this unless you want different defaults for root.
+# Note: PS1 and umask are already set in /etc/profile. You should not need this unless you want different defaults for root.
 # PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
 # umask 022
 
-# You may uncomment the following lines if you want `ls' to be colorized:
-# export LS_OPTIONS='--color=auto'
-# eval "`dircolors`"
-alias ll='ls $LS_OPTIONS -l'
-alias lah='ls $LS_OPTIONS -lah'
-alias lrt='ls $LS_OPTIONS -lrt'
-# Some more alias to avoid making mistakes:
-# alias rm='rm -i'
-# alias cp='cp -i'
-# alias mv='mv -i'
+PS1='\[\e[1;31m\][\u@\h \W]\$\[\e[0m\] ' # Color: RED
+
+# Command history in Bash
 HISTSIZE=10000
 HISTFILESIZE=10000
+
+# You may uncomment the following lines if you want `ls' to be colorized:
+ export LS_OPTIONS='--color=auto'
+ eval "`dircolors`"
+ alias ls='ls $LS_OPTIONS'
+ alias ll='ls $LS_OPTIONS -l'
+ alias l='ls $LS_OPTIONS -lA'
+
+# Some more alias to avoid making mistakes:
+ alias rm='rm -i'
+ alias cp='cp -i'
+ alias mv='mv -i'
+
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
@@ -27,17 +31,22 @@ if ! shopt -oq posix; then
 fi
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# source <(kubectl completion bash)
-source <(helm completion bash)
-source <(velero completion bash)
-
-alias k=kubecolor
+# Kubecolor and kubectl completion
+  source <(helm completion bash)
+  source <(velero completion bash)
+  # source <(kubectl completion bash)
+alias k=kubectl
 alias kubectl=kubecolor
 complete -o default -F __start_kubectl k
 
-# Este archivo configura:
-# - Alias útiles para comandos comunes (ls, kubectl).
-# - Un historial más amplio para almacenar más comandos.
-# - Autocompletado en la terminal, incluyendo herramientas específicas como helm y velero.
-# - Reemplazo de kubectl con kubecolor para mejorar la legibilidad con colores.
-# - Extensiones del $PATH para incluir herramientas como krew.
+# Environment variables related to proxy configuration: 
+  # export http_proxy="proxy.mapa.es:3128"
+  # export https_proxy="proxy.mapa.es:3128"
+  # export no_proxy=".mapa.es,10.0.0.0/8,.cluster.local"
+
+# This ~/.bashrc file configures:
+  # Custom prompt with red color showing user, host, and directory.
+  # Colorization and aliases for ls and commands (ll, l) for detailed listings.
+  # Security aliases for rm, cp, and mv with confirmation before execution.
+  # Autocompletion for Bash and Kubernetes tools (helm, velero, kubectl).
+  # Proxy configuration for http and https, with exceptions for certain domains.
